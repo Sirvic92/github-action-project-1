@@ -1,0 +1,14 @@
+name: workflow 2
+on: 
+  issues:
+    types: [opened, edited, closed]
+jobs:
+  issue:
+    name: issue
+    runs-on: ubuntu-latest
+    steps:
+    - name: print event info
+      run: echo "Issue event triggered: ${{ github.event.action }}"
+    - name: print issue title
+      run: echo "Issue title: ${{ github.event.issue.title }}"
+      
