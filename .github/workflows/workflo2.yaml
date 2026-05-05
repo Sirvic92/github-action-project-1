@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: print event info
-      run: echo "Issue event triggered: ${{ github.event.action }}"
+      run: echo "${{ github.event.action }} "
     - name: print issue title
       run: echo "Issue title: ${{ github.event.issue.title }}"
       
