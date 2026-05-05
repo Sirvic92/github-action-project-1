@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: print event info
-      run: echo "${{ github.event.action }} "
+      run: echo "${{ toJSON(github.event.action) }} "
     - name: print issue title
-      run: echo "${{ github.event.issue.title }}"
+      run: echo "${{ toJSON(github.event.issue.title) }}"
