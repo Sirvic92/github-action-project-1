@@ -1,7 +1,7 @@
 name: workflow 2
-on: 
+on:
   issues:
-    types: [opened, edited, closed]
+    types: [ opened, edited, closed ]
 jobs:
   issue:
     name: issue
@@ -10,5 +10,4 @@ jobs:
     - name: print event info
       run: echo "${{ github.event.action }} "
     - name: print issue title
-      run: echo "Issue title: ${{ github.event.issue.title }}"
-      
+      run: echo "${{ github.event.issue.title }}"
